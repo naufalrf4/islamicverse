@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NoorAI - Your Companion in Faith</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body class="bg-gray-50 text-gray-700">
+    <!-- Navigation -->
+    <header class="w-full z-30 top-0 py-1 bg-white shadow-md sticky">
+      <div class="order-1 md:order-2"></div>
+      <div
+        class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-6 py-3"
+      >
+        <label for="menu-toggle" class="cursor-pointer md:hidden block">
+          <svg
+            class="fill-current text-gray-900"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+          >
+            <title>menu</title>
+            <path d="M0,3H20V4H0ZM0,9H20v1H0Zm0,6H20v1H0Z"></path>
+          </svg>
+        </label>
+        <input class="hidden" type="checkbox" id="menu-toggle" />
+        <a
+          class="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl"
+          href="#"
+        >
+          NoorAI
+        </a>
+        <div
+          class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1"
+          id="menu"
+        ></div>
+
+        <div class="order-2 md:order-3 flex items-center" id="nav-content">
+          <nav>
+            <ul
+              class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0"
+            >
+              <li>
+                <a
+                  class="inline-block no-underline hover:text-green-500 hover:underline py-2 px-4"
+                  href="#"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  class="inline-block no-underline hover:text-green-500 hover:underline py-2 px-4"
+                  href="#"
+                  >Features</a
+                >
+              </li>
+              <li>
+                <a
+                  class="inline-block no-underline hover:text-green-500 hover:underline py-2 px-4"
+                  href="#"
+                  >Pricing</a
+                >
+              </li>
+              <li>
+                <a
+                  class="inline-block no-underline hover:text-green-500 hover:underline py-2 px-4"
+                  href="#"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="relative"
+      style="
+        background-image: url('/path_to_your_image.jpg');
+        background-size: cover;
+        background-position: center center;
+      "
+    >
+      <div
+        class="bg-black bg-opacity-50 flex items-center justify-center"
+        style="height: 90vh"
+      >
+        <div class="text-center text-white p-8">
+          <h1 class="text-6xl font-bold mb-4">
+            Your financial partners for growth and prosperity
+          </h1>
+          <p class="mb-8">Your Financial Accounting Partner</p>
+          <a
+            href="#"
+            class="inline-block bg-green-500 text-white font-bold py-2 px-4 rounded hover:bg-green-700 transition duration-300"
+            >Get a quote</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="container mx-auto py-16">
+      <div class="text-center">
+        <h2 class="text-3xl font-bold text-gray-800">Explore Our Features</h2>
+        <p class="mt-4 text-lg text-gray-600">
+          AI-driven insights, personalized schedules, and more.
+        </p>
+      </div>
+      <!-- Feature Tiles -->
+    </section>
+
+    <!-- AI Chat Section -->
+    <section class="bg-white py-16">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-wrap items-center">
+          <div class="w-full lg:w-1/2">
+            <h2 class="text-3xl font-bold text-gray-800">Ask NoorAI</h2>
+            <p class="text-gray-600 mt-4">
+              Get instant insights on Hadiths and Quranic verses. Our AI is here
+              to help you understand the teachings and references with ease.
+            </p>
+          </div>
+          <div class="w-full lg:w-1/2 mt-6 lg:mt-0">
+            <div class="bg-green-100 rounded-lg p-6">
+              <div class="mb-4">
+                <label for="chat" class="block mb-2 text-sm text-gray-600"
+                  >Ask about Hadiths and Quranic verses:</label
+                >
+                <textarea
+                  id="chat"
+                  rows="4"
+                  class="block p-4 w-full text-gray-700 bg-white rounded-lg border border-gray-300 focus:ring focus:ring-green-200"
+                ></textarea>
+              </div>
+              <div class="text-right">
+                <button
+                  id="send-button"
+                  class="bg-green-500 text-white px-8 py-2 rounded-full font-semibold hover:bg-green-600 focus:outline-none focus:ring focus:ring-green-300"
+                >
+                  Send
+                </button>
+              </div>
+            </div>
+            <!-- This is where the AI responses will appear -->
+            <div class="mt-6 bg-white rounded-lg p-6 border border-gray-300">
+              <p class="text-gray-600">NoorAI Response:</p>
+              <div class="mt-4 bg-green-50 p-4 rounded-lg text-gray-700">
+                <!-- AI response will be dynamically inserted here -->
+                <p id="ai-response">Your AI responses will show up here...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="bg-green-100 py-16">
+      <div class="container mx-auto">
+        <h2 class="text-center text-3xl font-bold text-gray-800">
+          What Our Users Say
+        </h2>
+        <!-- Testimonials Content -->
+      </div>
+    </section>
+
+    <!-- Call-to-Action -->
+    <section class="text-center py-16">
+      <h2 class="text-3xl font-bold text-gray-800">
+        Join the NoorAI Beta Program
+      </h2>
+      <p class="mt-4 text-lg text-gray-600">
+        Be among the first to experience the future of digital Islamic guidance.
+      </p>
+      <button
+        class="mt-8 bg-green-500 text-white px-6 py-2 rounded-lg shadow-lg"
+      >
+        Sign Up Now
+      </button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-6">
+      <div class="container mx-auto text-center">
+        <p class="text-gray-600">&copy; 2024 NoorAI. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="assets/js/script.js"></script>
+  </body>
+</html>
