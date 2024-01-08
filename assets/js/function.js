@@ -74,7 +74,7 @@ function getLocationName(latitude, longitude) {
   }
 }
 function getJadwalSholatByLocation(latitude, longitude) {
-  const apiEndpoint = "http://api.aladhan.com/v1/calendar/";
+  const apiEndpoint = "https://api.aladhan.com/v1/calendar/";
   const currentDate = new Date();
   const date = currentDate.getDate();
   const month = currentDate.getMonth() + 1;
