@@ -6,14 +6,6 @@
 @import url("../css/slick.css");
 @import url("../css/animate.css");
 
-/* @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Montserrat:100,200,300,400,600,700,800,900|Open+Sans:400,700|Poppins:400,500');
-    @import url("../css/bootstrap.min.css");
-    @import url("../css/custom-icons.min.css");
-    @import url("../css/theme-icons.min.css");
-    @import url("../css/cubeportfolio.css");
-    @import url("../css/bootsnav.css");
-    @import url("../css/slick.css");
-    @import url("../css/animate.css"); */
 .chatbox {
   padding: 24px;
   background-color: #fefefe;
@@ -4188,7 +4180,7 @@ img.mfp-img {
   background-color: #fff;
   padding: 20px;
   border: 2px solid #ececec;
-  border-radius: 10px;
+  border-radius: 14px;
 }
 
 .post-info {
@@ -4202,6 +4194,7 @@ img.mfp-img {
   z-index: 10;
 }
 .post .post-img img {
+  border-radius: 16px;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   z-index: 0;
@@ -4884,7 +4877,7 @@ ul.footer-contact li {
 }
 
 ul.footer-contact li i {
-  color: #ffb300;
+  color: #40955d;
   margin-right: 10px;
   float: left;
   width: 6%;
