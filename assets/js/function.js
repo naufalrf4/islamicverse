@@ -20,7 +20,7 @@ async function fetchLatestPosts() {
       </div>
       <div class="post-info">
         <h3><a href="${post.link}" target="_blank">${post.title}</a></h3>
-        <p>${post.description}</p>
+        <p class="text-justify">${post.description}</p>
         <div class="date">${formatDate(post.pubDate)}</div>
         <a class="readmore" href="${post.link}" target="_blank">
           <span>Baca Selengkapnya <i class="eicon mdi mdi-arrow-right"></i></span>

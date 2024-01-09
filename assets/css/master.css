@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Montserrat:100,200,300,400,600,700,800,900|Open+Sans:400,700|Poppins:400,500");
-@import url("../css/bootstrap.min.css");
-@import url("../css/custom-icons.min.css");
-@import url("../css/theme-icons.min.css");
-@import url("../css/bootsnav.css");
-@import url("../css/slick.css");
-@import url("../css/animate.css");
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@700&display=swap');
+@import url("bootstrap.min.css");
+@import url("custom-icons.min.css");
+@import url("theme-icons.min.css");
+@import url("bootsnav.css");
+@import url("slick.css");
+@import url("animate.css");
 
 .chatbox {
   padding: 24px;
@@ -23,6 +24,10 @@
   max-height: 100%; /* Allow the messages container to take full height */
   display: flex;
   flex-direction: column; /* Keep the original order of messages */
+}
+
+.button-material {
+  font-size: 18px
 }
 
 .message {
@@ -59,59 +64,86 @@
 }
 
 .prayer-times-container {
-
+  background-image: url(../images/background/mandala.png);
+  font-family: 'El Messiri', sans-serif;
   max-width: 400px;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.2);
+  margin: auto;
+  padding: 52px 24px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ddd;
 }
-.prayer-times-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
+
 .prayer-times-header h1 {
   font-size: 20px;
-  color: #666;
+  color: #ccc;
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 2px dashed #82d279;
+  text-align: center;
 }
-.prayer-times-header h2 {
+
+.date-line p {
   font-size: 16px;
-  color: #666;
+  color: #ccc;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
 }
-.date-line {
+
+.date-line .icons {
+  font-size: 24px;
+  color: #d2a679;
   text-align: center;
   margin-bottom: 20px;
 }
-.date-line p {
-  font-size: 16px;
-  color: #444;
-  margin-bottom: 5px;
-}
-.date-line .icons {
-  color: #d2a679;
-}
+
 .prayer-time {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 8px 0;
+  padding: 10px 0;
   border-bottom: 1px dotted #ccc;
 }
+
 .prayer-time:last-child {
   border-bottom: none;
 }
+
 .prayer-name {
-  color: #333;
   font-size: 18px;
+  color: #ccc;
 }
+
 .prayer-time-value {
-  color: #333;
   font-size: 18px;
+  color: #ccc;
 }
-.ornamental-design {
-  margin-top: 20px;
-  text-align: center;
+
+@media (max-width: 768px) {
+  .prayer-times-container {
+    max-width: 95%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .prayer-times-header h1 {
+    font-size: 20px;
+  }
+
+  .date-line p {
+    font-size: 14px;
+  }
+
+  .date-line .icons {
+    font-size: 20px;
+  }
+
+  .prayer-name, .prayer-time-value {
+    font-size: 16px;
+  }
 }
+
 
 *:after,
 *:before,
@@ -1394,10 +1426,11 @@ section.dark-block.title-hero-bg::before {
 }
 
 .parallax-bg {
-  background-size: cover;
+  background-image: url(assets/images/background/pattern-parallax.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 100%;
@@ -1581,6 +1614,12 @@ section.dark-block.title-hero-bg::before {
 
 .box-title-three:after {
   background: url(../images/polygon-box-2.svg) no-repeat;
+}
+
+.feature-img {
+  width: 128px;
+  height: 128px;
+  margin-bottom: 14px;
 }
 
 .img-icon {
@@ -4168,18 +4207,16 @@ img.mfp-img {
   z-index: -1;
 }
 
-/*=============================================
-                        Our Blog
-=============================================*/
 .blog-slider .post {
   margin: 20px 0;
   padding: 0 10px;
 }
 
 .post {
+  min-height: 578px;
   background-color: #fff;
   padding: 20px;
-  border: 2px solid #ececec;
+  border: 3px solid #d4d4d4;
   border-radius: 14px;
 }
 
@@ -4242,8 +4279,8 @@ img.mfp-img {
 }
 .post .post-info .date {
   position: absolute;
-  top: -18px;
-  left: 35px;
+  top: -22px;
+  left: 30px;
   z-index: 99;
   background-color: #006633;
   color: #fff;

@@ -275,7 +275,7 @@
             </div>
             <!-- Judul dan Deskripsi Column -->
             <div class="col-md-6 heading-style-one text-left">
-              <h6 class="yellow-color text-uppercase">
+              <h6 class="default-color text-uppercase">
                 Tepat Waktu, Tepat Hati
               </h6>
               <h2><span class="font-700">Jadwal Sholat Harian</span></h2>
@@ -308,7 +308,7 @@
                 Kemudahan dalam Satu Aplikasi Islami.
               </h4>
 
-              <p>
+              <p class="text-justify">
                 Dengan Aplikasi Islami kami, nikmati kemudahan mengakses
                 berbagai fitur unggulan. Dari jadwal sholat yang akurat hingga
                 berita Islami terkini, serta dialog interaktif dengan chatbot AI
@@ -322,7 +322,11 @@
             <div
               class="col-md-4 main-service-box text-center col-sm-4 feature-box"
             >
-              <i class="infection-icon img-icon"></i>
+              <img
+                alt="prayer schedule"
+                src="assets/images/icons/calendar.png"
+                class="feature-img"
+              />
               <h4>Jadwal Sholat Harian</h4>
               <p>
                 Temukan irama spiritual harian dengan jadwal sholat lengkap,
@@ -332,7 +336,11 @@
             <div
               class="col-md-4 main-service-box text-center col-sm-4 feature-box"
             >
-              <i class="earth-icon img-icon"></i>
+              <img
+                alt="islamic chatbot"
+                src="assets/images/icons/phone.png"
+                class="feature-img"
+              />
               <h4>Chatbot AI Islami</h4>
               <p>
                 Ajukan pertanyaan keislaman Anda dan dapatkan jawaban instan
@@ -342,7 +350,11 @@
             <div
               class="col-md-4 main-service-box text-center col-sm-4 feature-box"
             >
-              <i class="food-icon img-icon"></i>
+              <img
+                alt="islamic news"
+                src="assets/images/icons/kitab.png"
+                class="feature-img"
+              />
               <h4>Berita Islami Terkini</h4>
               <p>
                 Baca berita Islami terbaru untuk mendapatkan perspektif
@@ -366,7 +378,7 @@
                     >Chatbot AI Islami Kami Siap Membantu Anda.</span
                   >
                 </h3>
-                <p>
+                <p class="text-justify">
                   Ajukan pertanyaan Islami Anda dan dapatkan jawaban instan
                   melalui Chatbot AI Islami kami. Menjadi teman setia dalam
                   menjelajahi kebijaksanaan agama, Chatbot AI kami siap
@@ -380,12 +392,9 @@
             <div class="card-body">
               <div class="chatbox">
                 <div class="messages" id="chat-messages">
-                  <!-- Placeholder for chat messages -->
                   <div class="message left">
                     Assalamualaikum, apakah ada yang bisa saya bantu?
                   </div>
-
-                  <!-- More messages go here -->
                 </div>
                 <form class="message-form">
                   <textarea
@@ -393,8 +402,8 @@
                     class="form-control"
                     placeholder="Ketik pertanyaan anda di sini..."
                   ></textarea>
-                  <button type="button" id="send-button" class="btn btn-color">
-                    <span style="font-size: 18px" class="mdi mdi-send"></span>
+                  <button title="Send" type="button" id="send-button" class="btn btn-color">
+                    <span class="button-material mdi mdi-send"></span>
                   </button>
                 </form>
               </div>
@@ -495,9 +504,6 @@
           <section
             class="parallax-bg fixed-bg pt-70 pb-70"
             data-stellar-background-ratio="0.2"
-            style="
-              background-image: url(assets/images/background/pattern-parallax.jpg);
-            "
           >
             <div class="container">
               <div class="row">
@@ -540,10 +546,10 @@
                           teman setia di setiap langkah perjalanan Anda.
                         </p>
                         <ul class="social-media">
-                          <li><a href="#" class="mdi mdi-instagram"></a></li>
-                          <li><a href="#" class="mdi mdi-facebook"></a></li>
-                          <li><a href="#" class="mdi mdi-twitter"></a></li>
-                          <li><a href="#" class="mdi mdi-pinterest"></a></li>
+                          <li><a href="#" aria-label="IslamicVerse Instagram" class="mdi mdi-instagram"></a></li>
+                          <li><a href="#" aria-label="IslamicVerse Facebook" class="mdi mdi-facebook"></a></li>
+                          <li><a href="#" aria-label="IslamicVerse Twitter" class="mdi mdi-twitter"></a></li>
+                          <li><a href="#" aria-label="IslamicVerse Youtube" class="mdi mdi-youtube"></a></li>
                         </ul>
                       </div>
                     </div>
