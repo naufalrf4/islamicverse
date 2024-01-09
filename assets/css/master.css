@@ -80,7 +80,7 @@
   color: #ccc;
   margin: 0;
   padding-bottom: 10px;
-  border-bottom: 2px dashed #82d279;
+  border-bottom: 2px dashed #9dff92;
   text-align: center;
 }
 
@@ -945,15 +945,37 @@ section .col-inner.border-block {
   margin: auto;
 }
 
-/*=============================================
-              		Header
-=============================================*/
-
 .navbar-nav {
   float: right;
   margin: 0;
   padding: 0 10px;
 }
+
+.navbar.navbar-fixed {
+  background-color: transparent; 
+}
+
+.navbar.navbar-fixed .navbar-nav>li>a {
+  color: #fff !important; 
+}
+
+
+.navbar.navbar-fixed.scrolled {
+  background-color: #fff; 
+}
+
+.navbar.navbar-fixed.scrolled .navbar-nav>li>a {
+  color: #000 !important; 
+}
+
+.navbar.navbar-fixed.scrolled .logo-display {
+  display: none;
+}
+
+.navbar.navbar-fixed.scrolled .logo-scrolled {
+  display: inline-block; 
+}
+
 
 nav.navbar.bootsnav.navbar-transparent .logo {
   position: relative;
@@ -987,6 +1009,10 @@ nav.navbar.bootsnav.navbar-transparent.brand-center .navbar-brand {
   height: 60px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+.logo-bg {
+  color: #fff;
 }
 
 .logo img {
@@ -1247,6 +1273,16 @@ nav.navbar.bootsnav.navbar-transparent.white ul.nav > li > a.btn-outline:focus {
   color: #fff !important;
 }
 
+.card-img-top {
+  width: 156px; 
+  height: 156px;
+  object-fit: cover;
+  border-radius: 50%; 
+  border: 3px solid #fff; 
+  margin: 2rem auto;
+  display: block;
+}
+
 .dark-bg {
   background-color: #212121;
 }
@@ -1260,7 +1296,7 @@ nav.navbar.bootsnav.navbar-transparent.white ul.nav > li > a.btn-outline:focus {
   background-color: #fff;
 }
 .light-bg {
-  background-color: #f7f5ff;
+  background-color: #f5fff6;
 }
 .default-bg {
   background-color: #1de9b6;
@@ -1292,6 +1328,10 @@ nav.navbar.bootsnav.navbar-transparent.white ul.nav > li > a.btn-outline:focus {
 
 .fixed-bg {
   background-attachment: fixed !important;
+}
+
+.cta-title {
+  font-weight: bold;
 }
 
 .overlay-bg {
@@ -1426,7 +1466,7 @@ section.dark-block.title-hero-bg::before {
 }
 
 .parallax-bg {
-  background-image: url(assets/images/background/pattern-parallax.jpg);
+  background-image: url(/assets/images/background/Ramadan-Pattern-03.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -2992,6 +3032,7 @@ fieldset[disabled] .btn {
 }
 
 .btn-secondary {
+  margin-top: 12px;
   color: #fff;
   border-color: #40955d;
   background-color: #40955d;
@@ -4213,7 +4254,7 @@ img.mfp-img {
 }
 
 .post {
-  min-height: 578px;
+  min-height: 600px;
   background-color: #fff;
   padding: 20px;
   border: 3px solid #d4d4d4;
