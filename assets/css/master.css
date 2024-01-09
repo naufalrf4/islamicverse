@@ -1466,7 +1466,7 @@ section.dark-block.title-hero-bg::before {
 }
 
 .parallax-bg {
-  background-image: url(/assets/images/background/Ramadan-Pattern-03.jpg);
+  background-image: url(../images/background/Ramadan-Pattern-03.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
