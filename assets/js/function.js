@@ -1,5 +1,6 @@
-const endpointUrl =
-  "https://api-berita-indonesia.vercel.app/republika/khazanah/";
+const endpointUrl = "https://api-berita-indonesia.vercel.app/republika/islam/";
+const defaultLatitude = -6.2088;
+const defaultLongitude = 106.8456;
 
 async function fetchLatestPosts() {
   try {
@@ -44,10 +45,6 @@ function formatDate(dateString) {
   const options = { year: "numeric", month: "long", day: "numeric" };
   return new Date(dateString).toLocaleDateString("en-US", options);
 }
-
-fetchLatestPosts();
-const defaultLatitude = -6.2088;
-const defaultLongitude = 106.8456;
 
 function getLocationName(latitude, longitude) {
   const apiKey = "c780bbdac1d64f1cab2832c6f971a5da";
@@ -132,9 +129,7 @@ function getJadwalSholatByLocation(latitude, longitude) {
       document.getElementById("isha-table").textContent = jadwalSholat.Isha;
     })
     .catch((error) => {
-      console.error("Error:", error);
-      const sholatTodayElement = document.getElementById("sholat-today");
-      sholatTodayElement.textContent = "Gagal mengambil data jadwal sholat.";
+      console.log("Error:", error);
     });
 }
 
@@ -159,38 +154,20 @@ document
     }
   });
 
-getLocationName(defaultLatitude, defaultLongitude);
-getJadwalSholatByLocation(defaultLatitude, defaultLongitude);
-
-document
-  .getElementById("fetch-prayer-times-btn")
-  .addEventListener("click", function () {
-    if ("geolocation" in navigator) {
-      navigator.geolocation.getCurrentPosition(
-        function (position) {
-          const latitude = position.coords.latitude;
-          const longitude = position.coords.longitude;
-
-          getLocationName(latitude, longitude);
-          getJadwalSholatByLocation(latitude, longitude);
-        },
-        function (error) {
-          console.error("Error getting location:", error);
-        }
-      );
-    } else {
-      console.log("Geolocation is not supported.");
-    }
-  });
 async function askServer(question) {
   try {
+    const endpoint = "https://api-naufalrf.azurewebsites.net/chat";
+
     const responseContainer = document.getElementById("chat-messages");
     const newMessage = document.createElement("div");
     newMessage.classList.add("message", "right");
     newMessage.innerText = question;
     responseContainer.appendChild(newMessage);
 
-    const endpoint = "https://api-naufalrf.azurewebsites.net/chat";
+    const loadingMessage = document.createElement("div");
+    loadingMessage.classList.add("message", "left", "loading");
+    loadingMessage.innerText = "...";
+    responseContainer.appendChild(loadingMessage);
 
     const data = {
       chatId: generateChatId(),
@@ -214,12 +191,24 @@ async function askServer(question) {
     const serverResponse = await response.json();
     const answer = serverResponse.content;
 
+    responseContainer.removeChild(loadingMessage);
+
     const serverMessage = document.createElement("div");
     serverMessage.classList.add("message", "left");
     serverMessage.innerText = answer;
     responseContainer.appendChild(serverMessage);
   } catch (error) {
     console.error("Terdapat kesalahan dalam menjawab pertanyaan:", error);
+
+    const loadingMessage = document.querySelector(".loading");
+    if (loadingMessage) {
+      loadingMessage.remove();
+    }
+
+    const errorContainer = document.createElement("div");
+    errorContainer.classList.add("message", "left", "error");
+    errorContainer.innerText = "Terjadi kesalahan dalam memproses pertanyaan.";
+    responseContainer.appendChild(errorContainer);
   }
 }
 
@@ -248,3 +237,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 function generateChatId() {
   return Math.floor(Math.random() * 1000000);
 }
+
+getLocationName(defaultLatitude, defaultLongitude);
+getJadwalSholatByLocation(defaultLatitude, defaultLongitude);
+fetchLatestPosts();

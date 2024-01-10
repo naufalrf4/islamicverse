@@ -17,9 +17,6 @@ jQuery(function ($) {
     });
 
     mainSlider();
-    testimonialSlider();
-    testimonialSliderTwo();
-    clientSlider();
     blogGridSlider();
     parallaxEffect();
 
