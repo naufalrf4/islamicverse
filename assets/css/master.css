@@ -956,8 +956,19 @@ section .col-inner.border-block {
 }
 
 .navbar.navbar-fixed .navbar-nav>li>a {
-  color: #fff !important; 
+  color: #000 !important; 
 }
+
+.card-body {
+  overflow: hidden; /* Menyembunyikan konten yang keluar dari kartu */
+}
+
+.card-text {
+  overflow: hidden;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+}
+
 
 
 .navbar.navbar-fixed.scrolled {

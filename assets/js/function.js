@@ -1,4 +1,5 @@
-const endpointUrl = "https://api-berita-indonesia.vercel.app/republika/islam/";
+const endpointUrl =
+  "https://api-berita-indonesia.vercel.app/republika/khazanah/";
 
 async function fetchLatestPosts() {
   try {
