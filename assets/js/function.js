@@ -190,7 +190,7 @@ async function askServer(question) {
     newMessage.innerText = question;
     responseContainer.appendChild(newMessage);
 
-    const endpoint = "https://api.naufalrf.tech/chat";
+    const endpoint = "https://api-naufalrf.azurewebsites.net/chat";
 
     const data = {
       chatId: generateChatId(),
