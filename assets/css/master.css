@@ -957,6 +957,12 @@ section .col-inner.border-block {
   color: transparent !important; 
 }
 
+@media screen and (max-width: 768px) {
+  .navbar.navbar-fixed .navbar-nav>li>a {
+    color: black !important;
+  }
+}
+
 .card-body {
   overflow: hidden; /* Menyembunyikan konten yang keluar dari kartu */
 }
