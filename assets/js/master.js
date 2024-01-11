@@ -44,7 +44,7 @@ jQuery(function ($) {
         infinite: true,
         centerMode: true,
         autoplay: true,
-        autoplaySpeed: 7000,
+        autoplaySpeed: 3000,
         slidesToShow: 1,
         slidesToScroll: 1,
         centerPadding: "0",
@@ -52,7 +52,6 @@ jQuery(function ($) {
       });
     }
 
-    /* ~~~ Blog Grid Slider ~~~ */
     function blogGridSlider() {
       $(".blog-grid-slider").slick({
         dots: false,
@@ -191,9 +190,8 @@ jQuery(function ($) {
   /* ===== PRELOADER  ===== */
 
   $(window).on("load", function () {
-    // Page loader
     $("#loader-overlay").delay(500).fadeOut();
-    $(".loader").delay(1000).fadeOut("slow");
+    $(".loader").delay(500).fadeOut("slow");
 
     $(window).trigger("scroll");
     $(window).trigger("resize");

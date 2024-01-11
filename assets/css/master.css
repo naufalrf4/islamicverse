@@ -1842,6 +1842,7 @@ section.dark-block.title-hero-bg::before {
                 Services Section
 =============================================*/
 .main-service-box {
+  min-height: 350px;
   padding: 35px;
   margin-bottom: 20px;
 }
@@ -2222,7 +2223,51 @@ input.search-bar-top:-moz-placeholder {
   text-align: justify;
 }
 .ex-feature {
-  padding: 0 2rem;
+  padding: 0 2rem 0 0;
+}
+
+.slogan-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.slogan-subtitle {
+  padding: 0 0 0 6rem;
+}
+
+.slogan-txt {
+  font-size: 28px;
+}
+
+.slogan-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .slogan-title {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slogan-subtitle {
+    padding: 2rem;
+  }
+  
+  .slogan-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.slogan-img img {
+  width: 65%;
 }
 
 .hero-text-wrap .hero-text .type-it {
