@@ -14,7 +14,14 @@ async function fetchLatestPosts() {
         const postElement = document.createElement("div");
         postElement.className = "col-md-4";
         postElement.innerHTML = `
-    <div class="post">
+    <div class="post"      
+    data-aos="fade-up"
+    data-aos-delay="50"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+    data-aos-once="true"
+    data-aos-anchor-placement="top-center">
       <div class="post-img"> 
         <img class="img-responsive" src="${post.thumbnail}" alt="${
           post.title
