@@ -173,7 +173,15 @@ async function askServer(question) {
 
     const loadingMessage = document.createElement("div");
     loadingMessage.classList.add("message", "left", "loading");
-    loadingMessage.innerText = "...";
+    
+   
+    const loadingAnimation = document.createElement("img");
+    loadingAnimation.src = "./assets/images/icons/loading-chat.svg"; 
+    loadingAnimation.alt = "Loading Animation";
+    loadingAnimation.width = "32";
+loadingAnimation.height = "32";
+    loadingMessage.appendChild(loadingAnimation);
+    
     responseContainer.appendChild(loadingMessage);
 
     const data = {
