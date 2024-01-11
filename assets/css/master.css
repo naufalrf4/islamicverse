@@ -183,6 +183,17 @@ ul#portfolio-filter li,
   transition: all 300ms ease-in-out;
 }
 
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @-webkit-keyframes empty {
   0% {
     opacity: 1;
@@ -2211,9 +2222,7 @@ input.search-bar-top:-moz-placeholder {
   text-align: justify;
 }
 .ex-feature {
-  flex: auto;
-  align-items: center;
-  justify-content: center;
+  padding: 0 2rem;
 }
 
 .hero-text-wrap .hero-text .type-it {

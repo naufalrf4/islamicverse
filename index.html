@@ -13,6 +13,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="shortcut icon" href="assets/images/favicon.png" />
     <link rel="stylesheet" href="assets/css/master.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
@@ -75,7 +76,15 @@
 
       <!--=== Hero Slider Start ===-->
 
-      <section class="home-slider" id="home">
+      <section 
+      data-aos="fade-in"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="true"
+      data-aos-anchor-placement="top-center"
+      class="home-slider" id="home">
         <div class="default-slider slick">
           <div class="slide">
             <div
@@ -142,7 +151,9 @@
                         Islami yang mendalam. Terangi wawasanmu sekarang.
                       </p>
                       <p class="text-left mt-30">
-                        <a class="btn btn-color page-scroll btn-circle btn-md" href="#news"
+                        <a
+                          class="btn btn-color page-scroll btn-circle btn-md"
+                          href="#news"
                           >Jelajahi Berita Islami</a
                         >
                       </p>
@@ -217,7 +228,9 @@
                         unduh sekarang.
                       </p>
                       <p class="text-left mt-30">
-                        <a class="btn btn-color page-scroll btn-circle btn-md" href="#cta"
+                        <a
+                          class="btn btn-color page-scroll btn-circle btn-md"
+                          href="#cta"
                           >Unduh Sekarang</a
                         >
                       </p>
@@ -233,7 +246,17 @@
       <!--=== Hero Slider End ===-->
       <!--=== Jadwal Sholat Start ===-->
 
-      <section id="schedule" class="py-8 bg-white">
+      <section
+        data-aos="fade-left"
+        data-aos-delay="25"
+        data-aos-duration="750"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+        data-aos-anchor-placement="top-center"
+        id="schedule"
+        class="py-8 bg-white"
+      >
         <div class="container">
           <div class="row">
             <div class="col-md-6 heading-style-one text-left">
@@ -304,7 +327,15 @@
       </section>
       <!--=== Jadwal Sholat End ===-->
 
-      <section id="feature">
+      <section
+      data-aos="fade-right"
+      data-aos-delay="25"
+      data-aos-duration="750"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="true"
+      data-aos-anchor-placement="top-center"
+      id="feature">
         <div class="mosque-1 shapes" data-opacity="0.2"></div>
         <div class="container">
           <div class="row">
@@ -370,7 +401,15 @@
         </div>
       </section>
 
-      <section id="chatbot" class="py-8 bg-white">
+      <section
+      data-aos="fade-left"
+      data-aos-delay="25"
+      data-aos-duration="750"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="false"
+      data-aos-anchor-placement="top-center"
+      id="chatbot" class="py-8 bg-white">
         <div class="container">
           <div class="row">
             <div class="col-md-6 justify-content">
@@ -422,7 +461,15 @@
         </div>
       </section>
 
-      <section class="pb-0" id="news">
+      <section
+      data-aos="fade-right"
+      data-aos-delay="25"
+      data-aos-duration="750"
+      data-aos-easing="ease-in"
+      data-aos-mirror="true"
+      data-aos-once="true"
+      data-aos-anchor-placement="top-center"
+      class="pb-0" id="news">
         <div class="mosque-2 shapes" data-opacity="0.2"></div>
         <div class="container">
           <div class="row">
@@ -438,7 +485,14 @@
           <div class="row mt-50" id="posts-container"></div>
         </div>
       </section>
-      <section class="py-8" id="testimonial">
+      <section
+      data-aos="fade-up"
+      data-aos-delay="25"
+      data-aos-duration="750"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="false"
+      class="py-8" id="testimonial">
         <div class="container">
           <div class="row">
             <div class="col-md-12 mx-auto text-center">
@@ -528,6 +582,13 @@
 
       <!--=== CTA Start ===-->
       <section
+      data-aos="fade-in"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="false"
+      data-aos-anchor-placement="top-center"
         id="cta"
         class="parallax-bg fixed-bg pt-70 pb-70"
         data-stellar-background-ratio="0.2"
@@ -701,6 +762,10 @@
     <script type="text/javascript" src="assets/js/plugins.js"></script>
     <script type="text/javascript" src="assets/js/master.js"></script>
     <script type="text/javascript" src="assets/js/function.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <!--=== Javascript End ===-->
   </body>
 </html>
