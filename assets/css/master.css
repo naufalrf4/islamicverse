@@ -1,147 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Montserrat:100,200,300,400,600,700,800,900|Open+Sans:400,700|Poppins:400,500");
-@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@700&display=swap");
 @import url("bootstrap.min.css");
 @import url("bootsnav.css");
 @import url("slick.css");
 @import url("animate.css");
-
-.chatbox {
-  padding: 24px;
-  background-color: #fefefe;
-  border: 1px solid #006633;
-  border-radius: 24px;
-  min-height: 320px;
-  /* max-height: 720px; */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end; /* Keep the content at the bottom */
-}
-
-.messages {
-  overflow-y: auto;
-  max-height: 100%; /* Allow the messages container to take full height */
-  display: flex;
-  flex-direction: column; /* Keep the original order of messages */
-}
-
-.button-material {
-  font-size: 18px
-}
-
-.message {
-  display: block;
-  max-width: 75%;
-  margin-bottom: 12px;
-  padding: 12px;
-  border-radius: 12px;
-}
-
-.left {
-  background-color: #006633;
-  color: white;
-  align-self: flex-start;
-}
-
-.right {
-  background-color: #e1e1e1;
-  color: #636363;
-  align-self: flex-end;
-}
-
-.message-form {
-  display: flex;
-}
-
-.message-form textarea {
-  flex-grow: 1;
-  margin-right: 10px;
-}
-
-.message-form button {
-  width: auto;
-}
-
-.prayer-times-container {
-  background-image: url(../images/background/mandala.png);
-  font-family: 'El Messiri', sans-serif;
-  max-width: 400px;
-  margin: auto;
-  padding: 52px 24px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border: 1px solid #ddd;
-}
-
-.prayer-times-header h1 {
-  font-size: 20px;
-  color: #ccc;
-  margin: 0;
-  padding-bottom: 10px;
-  border-bottom: 2px dashed #9dff92;
-  text-align: center;
-}
-
-.date-line p {
-  font-size: 16px;
-  color: #ccc;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-.date-line .icons {
-  font-size: 24px;
-  color: #d2a679;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.prayer-time {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
-  border-bottom: 1px dotted #ccc;
-}
-
-.prayer-time:last-child {
-  border-bottom: none;
-}
-
-.prayer-name {
-  font-size: 18px;
-  color: #ccc;
-}
-
-.prayer-time-value {
-  font-size: 18px;
-  color: #ccc;
-}
-
-@media (max-width: 768px) {
-  .prayer-times-container {
-    max-width: 95%;
-    margin: 20px auto;
-    padding: 15px;
-  }
-
-  .prayer-times-header h1 {
-    font-size: 20px;
-  }
-
-  .date-line p {
-    font-size: 14px;
-  }
-
-  .date-line .icons {
-    font-size: 20px;
-  }
-
-  .prayer-name, .prayer-time-value {
-    font-size: 16px;
-  }
-}
-
 
 *:after,
 *:before,
@@ -181,6 +43,16 @@ ul#portfolio-filter li,
   -ms-transition: all 300ms ease-in-out;
   -o-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
+}
+
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 @keyframes transitionIn {
@@ -717,6 +589,144 @@ h6 {
   font-family: "Montserrat", sans-serif;
 }
 
+.chatbox {
+  padding: 24px;
+  background-color: #fefefe;
+  border: 1px solid #006633;
+  border-radius: 24px;
+  min-height: 320px;
+  /* max-height: 720px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Keep the content at the bottom */
+}
+
+.messages {
+  overflow-y: auto;
+  max-height: 100%; /* Allow the messages container to take full height */
+  display: flex;
+  flex-direction: column; /* Keep the original order of messages */
+}
+
+.button-material {
+  font-size: 18px;
+}
+
+.message {
+  display: block;
+  max-width: 75%;
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.left {
+  background-color: #006633;
+  color: white;
+  align-self: flex-start;
+}
+
+.right {
+  background-color: #e1e1e1;
+  color: #636363;
+  align-self: flex-end;
+}
+
+.message-form {
+  display: flex;
+}
+
+.message-form textarea {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.message-form button {
+  width: auto;
+}
+
+.prayer-times-container {
+  background-image: url(../images/background/mandala.png);
+  font-family: "El Messiri", sans-serif;
+  max-width: 400px;
+  margin: auto;
+  padding: 52px 24px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ddd;
+}
+
+.prayer-times-header h1 {
+  font-size: 20px;
+  color: #ccc;
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 2px dashed #9dff92;
+  text-align: center;
+}
+
+.date-line p {
+  font-size: 16px;
+  color: #ccc;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.date-line .icons {
+  font-size: 24px;
+  color: #d2a679;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.prayer-time {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px dotted #ccc;
+}
+
+.prayer-time:last-child {
+  border-bottom: none;
+}
+
+.prayer-name {
+  font-size: 18px;
+  color: #ccc;
+}
+
+.prayer-time-value {
+  font-size: 18px;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .prayer-times-container {
+    max-width: 95%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .prayer-times-header h1 {
+    font-size: 20px;
+  }
+
+  .date-line p {
+    font-size: 14px;
+  }
+
+  .date-line .icons {
+    font-size: 20px;
+  }
+
+  .prayer-name,
+  .prayer-time-value {
+    font-size: 16px;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -961,15 +971,15 @@ section .col-inner.border-block {
 }
 
 .navbar.navbar-fixed {
-  background-color: transparent; 
+  background-color: transparent;
 }
 
-.navbar.navbar-fixed .navbar-nav>li>a {
-  color: transparent !important; 
+.navbar.navbar-fixed .navbar-nav > li > a {
+  color: transparent !important;
 }
 
 @media screen and (max-width: 768px) {
-  .navbar.navbar-fixed .navbar-nav>li>a {
+  .navbar.navbar-fixed .navbar-nav > li > a {
     color: black !important;
   }
 }
@@ -984,14 +994,12 @@ section .col-inner.border-block {
   text-overflow: ellipsis;
 }
 
-
-
 .navbar.navbar-fixed.scrolled {
-  background-color: #fff; 
+  background-color: #fff;
 }
 
-.navbar.navbar-fixed.scrolled .navbar-nav>li>a {
-  color: #000 !important; 
+.navbar.navbar-fixed.scrolled .navbar-nav > li > a {
+  color: #000 !important;
 }
 
 .navbar.navbar-fixed.scrolled .logo-display {
@@ -999,9 +1007,8 @@ section .col-inner.border-block {
 }
 
 .navbar.navbar-fixed.scrolled .logo-scrolled {
-  display: inline-block; 
+  display: inline-block;
 }
-
 
 nav.navbar.bootsnav.navbar-transparent .logo {
   position: relative;
@@ -1300,11 +1307,11 @@ nav.navbar.bootsnav.navbar-transparent.white ul.nav > li > a.btn-outline:focus {
 }
 
 .card-img-top {
-  width: 156px; 
+  width: 156px;
   height: 156px;
   object-fit: cover;
-  border-radius: 50%; 
-  border: 3px solid #fff; 
+  border-radius: 50%;
+  border: 3px solid #fff;
   margin: 2rem auto;
   display: block;
 }
@@ -1765,7 +1772,6 @@ section.dark-block.title-hero-bg::before {
   font-weight: normal;
   text-transform: capitalize;
 }
-
 
 .single-portfolio h1 {
   text-align: center;
@@ -2246,6 +2252,8 @@ input.search-bar-top:-moz-placeholder {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  animation: moveUpDown 2s ease-in-out infinite;
 }
 @media screen and (max-width: 768px) {
   .slogan-title {
@@ -2254,11 +2262,11 @@ input.search-bar-top:-moz-placeholder {
     justify-content: center;
     align-items: center;
   }
-  
+
   .slogan-subtitle {
     padding: 2rem;
   }
-  
+
   .slogan-img {
     display: flex;
     flex-direction: column;
@@ -4400,6 +4408,20 @@ img.mfp-img {
   border-radius: 10px;
 }
 
+@media screen and (max-width: 768px) {
+  .post .post-info .date {
+    position: absolute;
+    top: -16px;
+    left: 30px;
+    z-index: 99;
+    background-color: #006633;
+    color: #fff;
+    font-size: 12px;
+    padding: 7px 20px;
+    border-radius: 10px;
+  }
+}
+
 .post-info h6.purple-color {
   color: #6a82fb;
 }
@@ -6150,9 +6172,6 @@ section.dark-block .default-slider .slick-dots li button {
   background: #fff;
 }
 
-/*=======================================================
-      Client Logo
-========================================================*/
 .client-logo {
   margin: 0px 15px;
 }
@@ -6525,7 +6544,6 @@ ul.social-top li a {
   padding-bottom: 0;
 }
 
-/*----- TIMELINE INFO -----*/
 .timeline-info {
   font-size: 12px;
   font-weight: 700;
@@ -6535,7 +6553,6 @@ ul.social-top li a {
   white-space: nowrap;
 }
 
-/*----- TIMELINE MARKER -----*/
 .timeline-marker {
   position: absolute;
   top: 0;
@@ -6575,7 +6592,6 @@ ul.social-top li a {
   border: 3px solid #1de9b6;
 }
 
-/*----- TIMELINE CONTENT -----*/
 .timeline-content {
   padding-bottom: 40px;
 }
@@ -6583,7 +6599,6 @@ ul.social-top li a {
   margin-bottom: 0;
 }
 
-/*----- TIMELINE PERIOD -----*/
 .period {
   padding: 0;
 }
@@ -6615,9 +6630,6 @@ ul.social-top li a {
   margin: 0;
 }
 
-/*----------------------------------------------
-    MOD: TIMELINE SPLIT
-----------------------------------------------*/
 @media (min-width: 768px) {
   .timeline-split .timeline,
   .timeline-centered .timeline {
@@ -6658,9 +6670,6 @@ ul.social-top li a {
   }
 }
 
-/*----------------------------------------------
-    MOD: TIMELINE CENTERED
-----------------------------------------------*/
 @media (min-width: 992px) {
   .timeline-centered,
   .timeline-centered .timeline-item,
@@ -6721,439 +6730,4 @@ ul.social-top li a {
   .timeline-centered .period .timeline-title {
     left: auto;
   }
-}
-
-/*----------------------------------------------
-    MOD: MARKER OUTLINE
-----------------------------------------------*/
-.marker-outline .timeline-marker:before {
-  background: transparent;
-  border-color: #ff6b6b;
-}
-.marker-outline .timeline-item:hover .timeline-marker:before {
-  background: #ff6b6b;
-}
-
-/*=======================================================
-      Widgets / Shortcodes
-========================================================*/
-
-.light-tabs {
-}
-.light-tabs .nav-tabs {
-  border-top: 1px solid #f1f1f1;
-  border-bottom: 0;
-  margin-bottom: 5px;
-}
-.light-tabs .nav-tabs > li {
-  float: none;
-  display: inline-block;
-}
-
-.light-tabs p {
-  margin-top: 20px;
-  font-weight: 300;
-}
-
-.light-tabs .nav-tabs > li > a {
-  margin-right: 0;
-  font-size: 14px;
-  line-height: 25px;
-  color: #212121;
-  border: 0;
-  border-radius: 0;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.light-tabs .nav > li > a:focus,
-.light-tabs .nav > li > a:hover {
-  background-color: transparent;
-}
-
-.light-tabs .nav-tabs > li.active > a,
-.light-tabs .nav-tabs > li.active > a:focus,
-.light-tabs .nav-tabs > li.active > a:hover {
-  border: 0;
-  color: #212121;
-  position: relative;
-  background: transparent;
-}
-.light-tabs .nav-tabs > li.active > a::before {
-  content: "";
-  background-color: #1de9b6;
-  width: 100%;
-  height: 1px;
-  position: absolute;
-  left: 0;
-  top: -1px;
-}
-
-section.dark-block .light-tabs .nav-tabs > li.active > a::before {
-  background-color: #212121;
-}
-
-.icon-tabs {
-}
-.icon-tabs .nav-tabs {
-  border-top: 0px solid #f1f1f1;
-  border-bottom: 0;
-  margin-bottom: 5px;
-}
-.icon-tabs .nav-tabs > li {
-  float: none;
-  display: inline-block;
-}
-
-.icon-tabs p {
-  margin-top: 20px;
-}
-
-.icon-tabs .nav-tabs > li > a {
-  margin-right: 0;
-  font-size: 14px;
-  line-height: 25px;
-  color: #212121;
-  border: 0;
-  border-radius: 0;
-}
-
-.icon-tabs .nav > li > a:focus,
-.icon-tabs .nav > li > a:hover {
-  background-color: transparent;
-}
-
-.icon-tabs .nav-tabs > li.active > a,
-.icon-tabs .nav-tabs > li.active > a:focus,
-.icon-tabs .nav-tabs > li.active > a:hover {
-  border: 0;
-  color: #1de9b6;
-  position: relative;
-  background: transparent;
-}
-
-.icon-tabs .nav-tabs > li > a i {
-  display: block;
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-
-.tabs-style-03 .icon-tabs .nav-tabs {
-  border-top: 0px solid #f1f1f1;
-  border-bottom: 0;
-  margin-bottom: 25px;
-}
-.tabs-style-03 .icon-tabs .nav-tabs > li {
-  display: inline-block;
-  width: 100%;
-  float: left;
-  margin-bottom: 15px;
-  text-align: left;
-}
-.tabs-style-03 .icon-tabs p {
-  margin-top: 5px;
-  font-size: 14px;
-}
-.tabs-style-03 .icon-tabs .nav-tabs > li > a {
-  margin-right: 0;
-  font-size: 14px;
-  line-height: 25px;
-  color: #006633;
-  padding: 10px 25px;
-  border: 2px solid #ececec;
-  border-radius: 10px;
-}
-.tabs-style-03 .icon-tabs .nav > li > a:focus,
-.tabs-style-01 .icon-tabs .nav > li > a:hover {
-  background-color: transparent;
-}
-.tabs-style-03 .icon-tabs .nav-tabs > li.active > a,
-.tabs-style-03 .icon-tabs .nav-tabs > li.active > a:focus,
-.tabs-style-03 .icon-tabs .nav-tabs > li.active > a:hover {
-  color: #006633;
-  position: relative;
-  border: 2px solid #006633;
-}
-.tabs-style-03 .icon-tabs .nav-tabs > li > a i {
-  display: block;
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-
-/* ----------------------------------------
-	Accordion Color
--------------------------------------------*/
-
-.accordion-color .panel {
-  box-shadow: none;
-  border: 0;
-  border-radius: 0;
-  margin-bottom: 10px;
-  background-color: transparent;
-}
-.accordion-color .panel-default > .panel-heading h3 {
-  font-size: 14px;
-}
-.accordion-color .panel .panel-heading {
-  position: relative;
-  padding: 0;
-  border-bottom: 0px solid #fff;
-}
-.accordion-color .panel-title a.collapsed {
-  display: block;
-  color: #006633;
-  background-color: transparent;
-  border-color: #f1f1f1;
-  padding: 13px 15px 13px 15px;
-  border-radius: 10px;
-  border: 2px solid #006633;
-}
-.accordion-color .panel-title a {
-  display: block;
-  color: #006633;
-  border: 2px solid #006633;
-  padding: 13px 15px 13px 15px;
-  background-color: transparent;
-  text-align: left;
-  border-radius: 10px 10px 0 0;
-}
-.accordion-color
-  .panel-default
-  > .panel-heading
-  + .panel-collapse
-  > .panel-body {
-  border: 2px solid #006633;
-  background-color: transparent;
-  text-align: left;
-  border-top: 0;
-  border-radius: 0 0 10px 10px;
-}
-.accordion-color .panel .panel-heading a:after {
-  font-family: "Material Design Icons";
-  content: "\f415";
-  font-size: 16px;
-  width: 50px;
-  height: 50px;
-  line-height: 52px;
-  text-align: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-.accordion-color .panel .panel-heading a.collapsed:after {
-  content: "\f374";
-}
-
-.accordion-color
-  .panel-default
-  > .panel-heading
-  + .panel-collapse
-  > .panel-body
-  h3 {
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.accordion-color
-  .panel-default
-  > .panel-heading
-  + .panel-collapse
-  > .panel-body
-  ul {
-  margin: 20px 0 0 0;
-  padding: 0px 40px;
-}
-.accordion-color
-  .panel-default
-  > .panel-heading
-  + .panel-collapse
-  > .panel-body
-  ul
-  li {
-  margin-bottom: 10px;
-  font-size: 14px;
-  position: relative;
-  line-height: 25px;
-}
-.accordion-color
-  .panel-default
-  > .panel-heading
-  + .panel-collapse
-  > .panel-body
-  p
-  a,
-.accordion-color
-  .panel-default
-  > .panel-heading
-  + .panel-collapse
-  > .panel-body
-  ul
-  li
-  a {
-  color: #d31027;
-  opacity: 0.5;
-}
-.accordion-color
-  .panel-default
-  > .panel-heading
-  + .panel-collapse
-  > .panel-body
-  p
-  a:hover,
-.accordion-color
-  .panel-default
-  > .panel-heading
-  + .panel-collapse
-  > .panel-body
-  ul
-  li
-  a:hover {
-  opacity: 1;
-}
-
-/* ----------------------------------------
-	Accordion Transparent
--------------------------------------------*/
-
-.accordion-transparent .panel {
-  box-shadow: none;
-  border: 0;
-  border-radius: 0;
-  background-color: transparent;
-}
-.accordion-transparent .panel-default > .panel-heading h3 {
-}
-.accordion-transparent .panel .panel-heading {
-  position: relative;
-  padding: 0;
-  background-color: transparent;
-  border-bottom: 1px solid #1de9b6;
-  border-top: 1px solid #1de9b6;
-  border-left: 1px solid #1de9b6;
-  border-right: 1px solid #1de9b6;
-  border-radius: 0;
-}
-.accordion-transparent .panel-title a.collapsed {
-  display: block;
-  color: #212121;
-  background-color: transparent;
-  border-color: transparent;
-  padding: 22px 15px 22px 80px;
-  border-radius: 0px;
-}
-.accordion-transparent .panel-title a {
-  display: block;
-  color: #212121;
-  border-color: transparent;
-  padding: 22px 15px 22px 80px;
-  background-color: transparent;
-}
-.accordion-transparent
-  .panel-default
-  > .panel-heading
-  + .panel-collapse
-  > .panel-body {
-  border: 1px solid transparent;
-  background: transparent;
-  border-bottom: 1px solid #1de9b6;
-  border-left: 1px solid #1de9b6;
-  border-right: 1px solid #1de9b6;
-}
-.accordion-transparent .panel .panel-heading a:after {
-  font-family: "Ionicons";
-  content: "\f462";
-  font-size: 24px;
-  width: 64px;
-  height: 64px;
-  line-height: 64px;
-  text-align: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-right: 1px solid #1de9b6;
-}
-.accordion-transparent .panel .panel-heading a.collapsed:after {
-  content: "\f489";
-}
-
-section.dark-block .accordion-transparent .panel .panel-heading {
-  border-bottom: 1px solid #fff;
-  border-top: 1px solid #fff;
-  border-left: 1px solid #fff;
-  border-right: 1px solid #fff;
-}
-
-section.dark-block .accordion-transparent .panel .panel-heading a:after {
-  border-right: 1px solid #fff;
-  color: #fff;
-}
-
-section.dark-block
-  .accordion-transparent
-  .panel-default
-  > .panel-heading
-  + .panel-collapse
-  > .panel-body {
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
-}
-
-section.dark-block .accordion-transparent .panel-title a.collapsed,
-section.dark-block .accordion-transparent .panel-title a {
-  color: #fff;
-}
-
-/* ----------------------------------------
-	Flex Slider
--------------------------------------------*/
-
-.slide-img-static {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.slider-bg-static {
-  border: 0;
-  margin: 0;
-  height: 500px;
-  background-color: #222225;
-}
-
-.slider-bg-static .slides {
-  height: 100%;
-}
-
-.slider-bg-static .slides > li {
-  height: 100%;
-}
-
-.slider-bg-static .hero-text {
-  display: table-cell;
-  vertical-align: middle;
-  position: relative;
-  width: 100%;
-  z-index: 10;
-  color: #fff;
-}
-
-.core-feature {
-  padding: 20px 10px 30px;
-  background: #ffffff;
-  box-shadow: 0 0px 60px 0 rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  width: 100%;
-  height: 100%;
-  margin-bottom: 30px;
-}
-.core-feature span {
-  margin-top: 20px;
-  display: block;
-  text-transform: capitalize;
-  color: #212121;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
 }

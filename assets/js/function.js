@@ -160,84 +160,110 @@ document
       console.log("Geolocation is not supported.");
     }
   });
+  let previousChat = ""; 
 
-async function askServer(question) {
-  try {
-    const endpoint = "https://api-naufalrf.azurewebsites.net/chat";
+  async function askServer(question) {
+    try {
+      const endpoint = "https://api-naufalrf.azurewebsites.net/chat";
+  
+      const responseContainer = document.getElementById("chat-messages");
 
-    const responseContainer = document.getElementById("chat-messages");
-    const newMessage = document.createElement("div");
-    newMessage.classList.add("message", "right");
-    newMessage.innerText = question;
-    responseContainer.appendChild(newMessage);
-
-    const loadingMessage = document.createElement("div");
-    loadingMessage.classList.add("message", "left", "loading");
-    
-   
-    const loadingAnimation = document.createElement("img");
-    loadingAnimation.src = "./assets/images/icons/loading-chat.svg"; 
-    loadingAnimation.alt = "Loading Animation";
-    loadingAnimation.width = "32";
-loadingAnimation.height = "32";
-    loadingMessage.appendChild(loadingAnimation);
-    
-    responseContainer.appendChild(loadingMessage);
-
-    const data = {
-      chatId: generateChatId(),
-      message: question,
-    };
-
-    const options = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    };
-
-    const response = await fetch(endpoint, options);
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+      if (previousChat.trim() !== "") {
+        const previousMessage = document.createElement("div");
+        previousMessage.classList.add("message", "right");
+        previousMessage.innerText = previousChat;
+        responseContainer.appendChild(previousMessage);
+      }
+  
+      const loadingMessage = document.createElement("div");
+      loadingMessage.classList.add("message", "left", "loading");
+  
+      const loadingAnimation = document.createElement("img");
+      loadingAnimation.src = "./assets/images/icons/loading-chat.svg";
+      loadingAnimation.alt = "Loading Animation";
+      loadingAnimation.width = "32";
+      loadingAnimation.height = "32";
+      loadingMessage.appendChild(loadingAnimation);
+  
+      responseContainer.appendChild(loadingMessage);
+  
+      const data = {
+        chatId: generateChatId(),
+        message: question,
+      };
+  
+      const options = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      };
+  
+      const response = await fetch(endpoint, options);
+  
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+  
+      const serverResponse = await response.json();
+      const answer = serverResponse.content;
+  
+      responseContainer.removeChild(loadingMessage);
+  
+      const serverMessage = document.createElement("div");
+      serverMessage.classList.add("message", "left");
+      serverMessage.innerText = answer;
+      responseContainer.appendChild(serverMessage);
+  
+      // Reset chat sebelumnya setelah pengiriman
+      previousChat = "";
+    } catch (error) {
+      console.error("Terdapat kesalahan dalam menjawab pertanyaan:", error);
+  
+      const loadingMessage = document.querySelector(".loading");
+      if (loadingMessage) {
+        loadingMessage.remove();
+      }
+  
+      const errorContainer = document.createElement("div");
+      errorContainer.classList.add("message", "left", "error");
+      errorContainer.innerText = "Terjadi kesalahan dalam memproses pertanyaan.";
+      responseContainer.appendChild(errorContainer);
     }
-
-    const serverResponse = await response.json();
-    const answer = serverResponse.content;
-
-    responseContainer.removeChild(loadingMessage);
-
-    const serverMessage = document.createElement("div");
-    serverMessage.classList.add("message", "left");
-    serverMessage.innerText = answer;
-    responseContainer.appendChild(serverMessage);
-  } catch (error) {
-    console.error("Terdapat kesalahan dalam menjawab pertanyaan:", error);
-
-    const loadingMessage = document.querySelector(".loading");
-    if (loadingMessage) {
-      loadingMessage.remove();
-    }
-
-    const errorContainer = document.createElement("div");
-    errorContainer.classList.add("message", "left", "error");
-    errorContainer.innerText = "Terjadi kesalahan dalam memproses pertanyaan.";
-    responseContainer.appendChild(errorContainer);
   }
-}
 
-const sendButton = document.getElementById("send-button");
-
-sendButton.addEventListener("click", function () {
   const chatInput = document.getElementById("chat-input");
-  const userQuestion = chatInput.value;
+  
+  chatInput.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault(); 
+  
+      const userQuestion = chatInput.value;
+  
+      if (userQuestion.trim() !== "") {
 
-  if (userQuestion.trim() !== "") {
-    askServer(userQuestion);
-    chatInput.value = "";
-  }
-});
+        previousChat = userQuestion;
+  
+        askServer(userQuestion);
+        chatInput.value = "";
+      }
+    }
+  });
+
+  const sendButton = document.getElementById("send-button");
+  
+  sendButton.addEventListener("click", function () {
+    const userQuestion = chatInput.value;
+  
+    if (userQuestion.trim() !== "") {
+      previousChat = userQuestion;
+  
+      askServer(userQuestion);
+      chatInput.value = "";
+    }
+  });
+  
 
 document.addEventListener("DOMContentLoaded", (event) => {
   document.getElementById("send-button").addEventListener("click", () => {
