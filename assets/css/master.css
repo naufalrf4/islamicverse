@@ -1072,6 +1072,10 @@ text-transform: capitalize;
   color: #000 !important;
 }
 
+.navbar.navbar-fixed.scrolled .navbar-nav > li > a:hover {
+  color: #ffcc00 !important;
+}
+
 .navbar.navbar-fixed.scrolled .logo-display {
   display: none;
 }
@@ -1235,9 +1239,7 @@ nav.navbar.bootsnav.navbar-transparent.white ul.nav > li > a.btn-outline:focus {
   margin-top: 2px;
 }
 
-/*=============================================
-			Sliders and Hero Section
-=============================================*/
+
 
 .hero-text {
   display: table-cell;
@@ -4205,89 +4207,6 @@ img.mfp-img {
 .project-type-list li i {
   margin-right: 10px;
 }
-
-.portfolio-right .project-type-list li,
-.portfolio-right .project-detail-box li {
-  text-transform: uppercase;
-}
-
-.portfolio-nav a {
-  overflow: hidden;
-  color: inherit;
-  cursor: default;
-  display: block;
-}
-.portfolio-nav a.disabled {
-  opacity: 0.6;
-  pointer-events: none;
-}
-.portfolio-nav a.disabled > span {
-  cursor: default;
-}
-.portfolio-nav a.disabled > span:hover {
-  color: inherit;
-}
-.portfolio-nav a.disabled:hover {
-  opacity: 0.4;
-}
-.portfolio-nav a.prev i {
-  margin-right: 10px;
-}
-.portfolio-nav a.showall {
-  text-align: center;
-}
-.portfolio-nav a.showall span {
-  padding: 36px 0;
-}
-.portfolio-nav a.showall span i {
-  font-size: 24px;
-  display: block;
-}
-@media only screen and (max-width: 767px) {
-  .portfolio-nav a.showall span i {
-    font-size: 30px;
-  }
-}
-
-.portfolio-nav a.next {
-  text-align: right;
-}
-.portfolio-nav a.next i {
-  margin-left: 10px;
-}
-.portfolio-nav a > span {
-  display: inline-block;
-  padding: 40px 0;
-  font-size: 12px;
-  cursor: pointer;
-  text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  letter-spacing: 1px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-.portfolio-nav a > span:hover {
-  color: #212121;
-}
-.portfolio-nav a > span i {
-  font-size: 14px;
-}
-.portfolio-nav a > span i:before {
-  vertical-align: middle;
-}
-@media only screen and (max-width: 767px) {
-  .portfolio-nav a > span {
-    font-size: 0;
-  }
-  .portfolio-nav a > span i {
-    font-size: 30px;
-  }
-}
-
-/*=============================================
-                Call to Action
-=============================================*/
 
 .cta h1 {
   color: #fff;
