@@ -1760,9 +1760,8 @@ section.dark-block.title-hero-bg::before {
 }
 
 .feature-img {
-  width: 128px;
-  height: 128px;
-  margin-bottom: 14px;
+  height: 100px;
+  margin-bottom: 16px;
 }
 
 .img-icon {
@@ -2309,9 +2308,6 @@ input.search-bar-top:-moz-placeholder {
   align-items: center;
 }
 
-.slogan-subtitle {
-  padding: 0 0 0 6rem;
-}
 
 .slogan-txt {
   font-size: 28px;
