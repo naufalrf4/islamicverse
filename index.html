@@ -845,6 +845,7 @@
       const swiper = new Swiper(".js-testimonials-slider", {
         grabCursor: true,
         spaceBetween: 30,
+        loop: true,
         pagination: {
           el: ".js-testimonials-pagination",
           clickable: true,
@@ -852,6 +853,7 @@
         autoplay: {
           delay: 2500,
           disableOnInteraction: false,
+          reverseDirection: true,
         },
         breakpoints: {
           768: {
