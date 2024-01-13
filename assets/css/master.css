@@ -5308,9 +5308,7 @@ textarea.form-control {
   -moz-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
 }
-.testimonials {
-  padding: 24px;
-}
+
 .default-slider,
 .home-fullslide {
   position: relative;
