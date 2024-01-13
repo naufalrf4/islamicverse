@@ -50,6 +50,7 @@ jQuery(function ($) {
         slidesToScroll: 1,
         centerPadding: "0",
         arrows: false,
+        pauseOnHover: false,
       });
     }
 
