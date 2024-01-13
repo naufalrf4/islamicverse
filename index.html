@@ -13,12 +13,23 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="shortcut icon" href="assets/images/favicon.png" />
     <link rel="stylesheet" href="assets/css/master.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
   </head>
-  <body class="light-bg">
+  <body>
     <!--=== Loader Start ======-->
     <div id="loader-overlay">
       <div class="loader">
@@ -517,6 +528,7 @@
           <div class="row mt-50" id="posts-container"></div>
         </div>
       </section>
+
       <section
         data-aos="fade-up"
         data-aos-delay="25"
@@ -524,92 +536,124 @@
         data-aos-easing="ease-in-out"
         data-aos-mirror="true"
         data-aos-once="true"
-        class="py-8"
-        id="testimonial"
+        id="testimonials"
+        class="testimonials"
       >
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 mx-auto text-center">
-              <h2 class="text-3xl font-bold text-dark">Apa Kata Mereka?</h2>
-              <p class="text-dark mt-4">
-                Dengarlah testimoni mereka yang telah merasakan manfaat dan
-                kedamaian melalui layanan kami.
-              </p>
-            </div>
+        <div class="container-testimonials">
+          <div class="section-header">
+            <h2 class="text-3xl font-bold text-dark title ">Apa kata Mereka?</h2>
+            <p class="text-dark mt-4">
+              Dengarlah testimoni mereka yang telah merasakan manfaat dan
+              kedamaian melalui layanan kami.
+            </p>
           </div>
-
-          <div class="container">
-            <div class="row mt-6">
-              <!-- Testimonial 1 -->
-              <div class="col-md-4">
-                <div class="card shadow">
-                  <img
-                    src="./assets/images/avatar/testimonial-1.svg"
-                    class="card-img-top rounded-circle mx-auto mt-3"
-                    alt="User Image"
-                  />
-                  <div class="card-body text-center">
-                    <p class="card-text text-dark">
-                      "Aplikasi Islami terbaik yang pernah saya gunakan! Dari
-                      jadwal sholat hingga berita Islami, semuanya lengkap dan
-                      mudah diakses. Sungguh memudahkan hidup saya dalam
-                      menjalani keseharian sesuai dengan ajaran agama."
-                    </p>
+          <div class="testimonials-content">
+            <div class="swiper testimonials-slider-js js-testimonials-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide testimonials-items">
+                  <div class="info">
+                    <img
+                      src="./assets/images/avatar/testimonial-1.svg"
+                      alt="User 1 testimonial"
+                    />
+                    <div class="text-box">
+                      <h3 class="name">Ahmad</h3>
+                      <span class="job">Pengguna Setia</span>
+                    </div>
                   </div>
-                  <div class="card-footer bg-white text-center">
-                    <h6 class="font-bold secondary-color">Ahmad</h6>
-                    <p class="text-gray-500">Pengguna Setia</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Testimonial 2 -->
-              <div class="col-md-4">
-                <img
-                  src="./assets/images/avatar/testimonial-2.svg"
-                  class="card-img-top rounded-circle mx-auto mt-3"
-                  alt="User Image"
-                />
-                <div class="card shadow">
-                  <div class="card-body text-center">
-                    <p class="card-text text-dark">
-                      "IslamicVerse membawa kemudahan dalam menjalani kehidupan
-                      Islami sehari-hari. Dengan jadwal sholat yang akurat,
-                      berita Islami terkini, dan jawaban AI yang mendalam,
-                      aplikasi ini benar-benar mempermudah perjalanan spiritual
-                      saya."
-                    </p>
-                  </div>
-                  <div class="card-footer bg-white text-center">
-                    <h6 class="font-bold secondary-color">Fatimah</h6>
-                    <p class="text-gray-500">Mahasiswa</p>
+                  <p>
+                    Aplikasi Islami terbaik yang pernah saya gunakan! Dari
+                    jadwal sholat hingga berita Islami, semuanya lengkap dan
+                    mudah diakses. Sungguh memudahkan hidup saya dalam menjalani
+                    keseharian sesuai dengan ajaran agama.
+                  </p>
+                  <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
                   </div>
                 </div>
-              </div>
-              <!-- Testimonial 3 -->
-              <div class="col-md-4">
-                <img
-                  src="./assets/images/avatar/testimonial-3.svg"
-                  class="card-img-top rounded-circle mx-auto mt-3"
-                  alt="User Image"
-                />
-                <div class="card shadow">
-                  <div class="card-body text-center">
-                    <p class="card-text text-dark">
-                      "IslamicVerse tidak hanya memberikan informasi Islami,
-                      tetapi juga memberikan pengalaman yang menyenangkan. Fitur
-                      tanya jawab dengan AI dan desain yang ramah pengguna
-                      membuat saya merasa terkoneksi dengan kekayaan ilmu
-                      Islam."
-                    </p>
+                <div class="swiper-slide testimonials-items">
+                  <div class="info">
+                    <img
+                      src="./assets/images/avatar/testimonial-2.svg"
+                      alt="User 1 testimonial"
+                    />
+                    <div class="text-box">
+                      <h3 class="name">Fatimah</h3>
+                      <span class="job">Mahasiswa</span>
+                    </div>
                   </div>
-                  <div class="card-footer bg-white text-center">
-                    <h6 class="font-bold secondary-color">Andi</h6>
-                    <p class="text-gray-500">Pencari Ilmu</p>
+                  <p>
+                    IslamicVerse membawa kemudahan dalam menjalani kehidupan
+                    Islami sehari-hari. Dengan jadwal sholat yang akurat, berita
+                    Islami terkini, dan jawaban AI yang mendalam, aplikasi ini
+                    benar-benar mempermudah perjalanan spiritual saya.
+                  </p>
+                  <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
+                <div class="swiper-slide testimonials-items">
+                  <div class="info">
+                    <img
+                      src="./assets/images/avatar/testimonial-3.svg"
+                      alt="User 1 testimonial"
+                    />
+                    <div class="text-box">
+                      <h3 class="name">Andi</h3>
+                      <span class="job">Pencari Ilmu</span>
+                    </div>
+                  </div>
+                  <p>
+                    IslamicVerse membawa kemudahan dalam menjalani kehidupan
+                    Islami sehari-hari. Dengan jadwal sholat yang akurat, berita
+                    Islami terkini, dan jawaban AI yang mendalam, aplikasi ini
+                    benar-benar mempermudah perjalanan spiritual saya.
+                  </p>
+                  <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
+                <div class="swiper-slide testimonials-items">
+                  <div class="info">
+                    <img
+                      src="./assets/images/avatar/testimonial-1.svg"
+                      alt="User 1 testimonial"
+                    />
+                    <div class="text-box">
+                      <h3 class="name">Agus</h3>
+                      <span class="job">Wiraswasta</span>
+                    </div>
+                  </div>
+                  <p>
+                    Aplikasi IslamicVerse sungguh menjadi sahabat setia dalam
+                    perjalanan spiritual saya. Dengan fitur-fitur terkini
+                    seperti jadwal sholat yang akurat dan berita Islami yang
+                    selalu up-to-date, saya merasa lebih terkoneksi dengan
+                    nilai-nilai agama.
+                  </p>
+                  <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
                   </div>
                 </div>
               </div>
             </div>
+            <div class="swiper-pagination js-testimonials-pagination"></div>
           </div>
         </div>
       </section>
@@ -797,7 +841,25 @@
     <script type="text/javascript" src="assets/js/master.js"></script>
     <script type="text/javascript" src="assets/js/function.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
+      const swiper = new Swiper(".js-testimonials-slider", {
+        grabCursor: true,
+        spaceBetween: 30,
+        pagination: {
+          el: ".js-testimonials-pagination",
+          clickable: true,
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+          },
+        },
+      });
       AOS.init();
     </script>
     <!--=== Javascript End ===-->

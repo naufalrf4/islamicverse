@@ -2,6 +2,8 @@ const endpointUrl = "https://api-berita-indonesia.vercel.app/republika/islam/";
 const defaultLatitude = -6.2088;
 const defaultLongitude = 106.8456;
 
+
+
 async function fetchLatestPosts() {
   try {
     const response = await fetch(endpointUrl);

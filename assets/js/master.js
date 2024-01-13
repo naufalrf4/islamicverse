@@ -1,3 +1,4 @@
+
 window.addEventListener("scroll", function () {
   var navbar = document.querySelector(".navbar");
   if (window.scrollY > 0) {
@@ -191,5 +192,6 @@ jQuery(function ($) {
         scrollTop: hash_offset,
       });
     }
+    
   });
 });

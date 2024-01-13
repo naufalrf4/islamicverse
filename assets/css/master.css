@@ -38,6 +38,7 @@ ul#portfolio-filter li,
 .pricing-box:hover ul li,
 .blog-grid-slider .slick-prev,
 .blog-grid-slider .slick-next {
+  box-sizing: border-box;
   -webkit-transition: all 300ms ease-in-out !important;
   -moz-transition: all 300ms ease-in-out;
   -ms-transition: all 300ms ease-in-out;
@@ -900,14 +901,83 @@ section .col-inner.border-block {
   border-top: 1px solid #e0e0e0;
   border-bottom: 1px solid #e0e0e0;
 }
+.container-testimonials {
+  max-width: 1180px;
+  margin: auto;
+  padding: 0 16px;
+}
+.section-header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+.section-header .title {
+  font-size: 36px;
+  font-weight: 600;
+  color: #212121;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+.testimonials {
+  padding: 100px 0;
+}
+.testimonials-items {
+  background-color: white;
+  padding: 30px;
+  border-radius: 30px;
+  border: 2px solid #006633;
+  box-shadow: 0 4px 8px rgba(0, 128, 0, 0.1); 
+}
 
+.testimonials-items .info {
+  display: flex;
+  align-items: center;
+}
+.testimonials-items img {
+  max-width: 64px;
+  border-radius: 50%;
+  margin-right: 20px;
+  vertical-align: middle;
+}
+.testimonials-items .name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #212121;
+line-height: 1.2;
+text-transform: capitalize;
+}
+.testimonials-items .job {
+  font-size: 14px;
+  font-weight: 400;
+  color: #212121;
+  margin-bottom: 10px;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+.testimonials-items p{
+  margin-top: 22px;
+  color: #888888;
+}
+.testimonials-items .rating {
+  margin-top: 15px;
+  font-size: 12px;
+  color: hsl(36, 88%, 66%);
+}
 .section-heading {
   text-align: center;
   margin: auto;
   float: none;
   padding-bottom: 20px;
 }
-
+.testimonials .swiper-pagination {
+  position: relative;
+  margin-top: 32px;
+  bottom: auto;
+}
+.testimonials .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #40955d;
+}
 .section-heading h2 {
   font-weight: 700;
 }
@@ -1307,8 +1377,8 @@ nav.navbar.bootsnav.navbar-transparent.white ul.nav > li > a.btn-outline:focus {
 }
 
 .card-img-top {
-  width: 156px;
-  height: 156px;
+  width: 64px;
+  height: 64px;
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid #fff;
@@ -5316,7 +5386,9 @@ textarea.form-control {
   -moz-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
 }
-
+.testimonials {
+  padding: ;
+}
 .default-slider,
 .home-fullslide {
   position: relative;
@@ -5411,6 +5483,9 @@ textarea.form-control {
   height: 20px;
   left: 2px;
 }
+
+
+
 
 section.dark-block .default-slider .slick-dots li button {
   background: rgba(33, 33, 33, 0.5);
