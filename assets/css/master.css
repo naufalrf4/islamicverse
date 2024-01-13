@@ -2323,7 +2323,7 @@ input.search-bar-top:-moz-placeholder {
   position: relative;
   animation: moveUpDown 2s ease-in-out infinite;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   .slogan-title {
     display: flex;
     flex-direction: column-reverse;
