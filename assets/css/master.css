@@ -2117,6 +2117,12 @@ section.dark-block.title-hero-bg::before {
   height: 300px;
   background: url(../images/mosque-2.svg) no-repeat;
 }
+@media screen and (max-width: 767px) {
+  .mosque-1,
+  .mosque-2 {
+    display: none;
+  }
+}
 
 .circle-box-big:after {
   left: -10%;
